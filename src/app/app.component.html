@@ -1,12 +1,48 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+<div class="container">
+
+  <div class="row">
+    <h2>{{message}}</h2>
+    <h3>
+      Welcome to the Trumpish World of Awesomeness!
+    </h3>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m4 l4 xl4">
+      <img class="img responsive-img" alt="Trump Cartoon" src="../assets/images/4trump.png">
+    </div>
+
+    <div class="col s12 m8 l8 xl8">
+      <p class="heading-zero">
+        <span>
+          KING OF TRUMPISHNESS
+        </span>
+      </p>
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m12 l12 xl12">
+      <h2>List of celebrities on a scale of Trumpishness </h2>
+      <h5>
+        <i>Trumpishness is a phenomenon of awesomeness, where we can measure awesomeness in people relative to the awesomeness
+          of Donald J. Trump.</i>
+      </h5>
+      <h5>AI Powered Ranking Coming soon...</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <app-trumpishpeople (childEvent)="message=$event" [parentData]="name"></app-trumpishpeople>
+  </div>
+
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
+
+
+<!-- <ul>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
   </li>
@@ -16,5 +52,4 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
-
+</ul> -->

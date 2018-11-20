@@ -1,0 +1,23 @@
+<div class="col s12 m12 l12">
+  <h5>{{parentData}}</h5>
+  <h4>Nominees for Trumpishness!</h4>
+
+  <!--  -->
+  <!-- Experiment -->
+  <input [(ngModel)]="name" type="text">
+  {{name}}
+</div>
+
+<div class="col s12 m6 l6 xl6">
+  <div class="row valign-wrapper" *ngFor="let pick of handPickedCelebrities">
+    <div class="col s3 m3 l2 xl2">
+      <img class="circle-image" src={{pick.picture}}>
+    </div>
+    <div class="col s6 m6 l6 xl6">
+      <h5>{{pick.name}}</h5>
+    </div>
+    <div class="col s3 m3 l4 xl4">
+      <button (click)="trumpIt()">Trump It!</button>
+    </div>
+  </div>
+</div>
